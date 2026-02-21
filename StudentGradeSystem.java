@@ -1,16 +1,17 @@
-import java.util.Scanner;
-
 public class StudentGradeSystem {
 
     public static void main(String[] args) {
-       String name = "Ayush";
+
+        String name = "Ayush";
+
+        // Hardcoded subject marks (Jenkins cannot take user input)
+        double[] marks = {85, 78, 92, 88};
 
         double total = 0;
+        int subjects = marks.length;
 
-        for (int i = 1; i <= subjects; i++) {
-            System.out.print("Enter marks for subject " + i + ": ");
-            double marks = sc.nextDouble();
-            total += marks;
+        for (int i = 0; i < subjects; i++) {
+            total += marks[i];
         }
 
         double average = total / subjects;
@@ -33,7 +34,5 @@ public class StudentGradeSystem {
         System.out.println("Total Marks: " + total);
         System.out.println("Average Marks: " + average);
         System.out.println("Grade: " + grade);
-
-        sc.close();
     }
 }
